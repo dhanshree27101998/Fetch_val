@@ -27,7 +27,7 @@ jobs:
           # echo ${{secrets.TEST_VAL}} | sed 's/ //g'
           # echo "TEST_SECRET" | sed 's/ //g'
           echo "${{ secrets.TEST_SECRET }}" | base64
-          echo "${{ secrets.VAL1 }}" | base64
+          echo "${{ secrets.TEST1 }}" | base64
 
       - name: Build Image
         run: |
