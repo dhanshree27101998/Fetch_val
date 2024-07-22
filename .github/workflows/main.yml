@@ -51,7 +51,7 @@ jobs:
 
       - name: Run Image
         run: |
-          docker run test_secret
+          docker run -e TEST1=${{ secrets.TEST1 }} -e TEST2=your_value1 test_secret:1
 
 
 
