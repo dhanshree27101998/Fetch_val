@@ -47,11 +47,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: dhanshreechandak98/test_secret:1
+          tags: dhanshreechandak98/test_secret
 
       - name: Run Image
         run: |
-          docker run -e TEST1=${{ secrets.TEST1 }} -e TEST2=your_value1 test_secret:1
+          docker run -e TEST1=${{ secrets.TEST1 }} -e TEST2=your_value1 test_secret
 
 
 
