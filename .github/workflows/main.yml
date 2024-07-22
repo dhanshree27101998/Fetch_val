@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Image
         run: |
-          docker build --build-arg TEST1={{secrets.TEST1}} -t test_secret .
+          docker build --build-arg TEST1={{ secrets.TEST1 }} -t test_secret .
 
       - name: Run Image
         run: |
