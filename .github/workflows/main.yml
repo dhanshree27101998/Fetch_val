@@ -51,6 +51,8 @@ jobs:
           tags: dhanshreechandak98/test_secret
 
       - name: Run Image
+        env:
+          ACTIONS_STEP_DEBUG: true
         run: |
           docker run -e TEST1=${{ secrets.TEST1 }} -e TEST2=your_value1 test_secret
 
