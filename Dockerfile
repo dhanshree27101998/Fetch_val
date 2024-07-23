@@ -5,6 +5,7 @@ ARG TEST1
 ARG TEST2
 ENV TEST1=${TEST1}
 ENV TEST2=${TEST2}
+RUN pip install cryptography
 CMD ["python", "app.py"]
 
 
