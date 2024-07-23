@@ -53,6 +53,7 @@ jobs:
       - name: Run Image
         env:
           ACTIONS_STEP_DEBUG: true
+          TEST1: ${{ secrets.TEST1 }}
         run: |
           docker run -e TEST1=${{ secrets.TEST1 }} -e TEST2=your_value1 test_secret
 
