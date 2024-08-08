@@ -42,7 +42,7 @@ jobs:
           ps -ef|grep py
           sudo netstat -tuln
           sudo lsof -i -P -n | grep py
-          sudo lsof -Pan -i
+          # sudo lsof -Pan -i
 
       - name: Build Image 2
         run: |
