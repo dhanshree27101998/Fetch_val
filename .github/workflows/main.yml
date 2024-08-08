@@ -37,6 +37,10 @@ jobs:
         run: |
           docker run -d getmethod
 
+      - name: Echo running python code
+        run: |
+          ps -ef|grep py
+
       - name: Build Image 2
         run: |
           docker build --build-arg TEST1=${{ secrets.TEST1 }} --build-arg TEST2="Dhanhsreeeeee" -t test_secret .
