@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Image 1
         run: |
-          docker run getmethod
+          docker run -d getmethod
 
       - name: Build Image 2
         run: |
