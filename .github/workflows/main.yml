@@ -41,6 +41,7 @@ jobs:
         run: |
           ps -ef|grep py
           sudo netstat -tuln
+          sudo lsof -Pan -p 2127 -i
 
       - name: Build Image 2
         run: |
