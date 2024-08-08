@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Image 1
         run: |
-          docker run -d getmethod
+          docker run -d  -p 5000:5000 getmethod
 
       - name: Echo running python code
         run: |
