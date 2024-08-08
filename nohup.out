@@ -33,3 +33,4 @@ Press CTRL+C to quit
 Address already in use
 Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
 127.0.0.1 - - [07/Aug/2024 10:28:45] "GET /api/data?param1=value1&param2=value2 HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/Documents/Fetch_secrets_val/Fetch_val/app.py', reloading

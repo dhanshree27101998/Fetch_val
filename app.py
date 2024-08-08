@@ -4,8 +4,8 @@ import os
 import requests
 
 # Fetch environment variables
-# variable_value = os.getenv('TEST1')
-variable_value="Dhanshree"
+variable_value = os.getenv('TEST1')
+# variable_value="Dhanshree"
 print(f'The value of TEST1 is {variable_value}')
 
 def get_request(url, headers=None, params=None):

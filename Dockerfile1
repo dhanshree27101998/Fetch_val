@@ -1,0 +1,14 @@
+FROM python:3.9-slim
+WORKDIR /app
+COPY . /app
+RUN pip install Flask
+CMD ["nohup","python3", "getmethod.py", "&"]
+
+
+#docker build -f Dockerfile1 -t getmethod .
+#docker run getmethod
+
+# docker run -e TEST1=your_value -e TEST2=your_value1 test_secret
+
+
+# nohup python3 getmethod.py &
