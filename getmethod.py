@@ -6,6 +6,7 @@ app = Flask(__name__)
 @app.route('/api/data', methods=['GET'])
 def get_data():
     # Access query parameters
+    print("in get_data")
     param1 = request.args.get('param1')
     param2 = request.args.get('param2')
     headers = dict(request.headers)
