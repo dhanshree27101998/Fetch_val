@@ -35,7 +35,8 @@ def get_request(url, headers=None, params=None):
         print(f'Other error occurred: {err}')
 
 # Example usage
-url = 'http://127.0.0.1:5000/api/data'
+# url = 'http://127.0.0.1:5000/api/data'
+url = 'http://0.0.0.0:5000/api/data'
 headers = {
     'Content-Type': 'application/json',
     'apiKey': variable_value
