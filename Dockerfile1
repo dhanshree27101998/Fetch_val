@@ -5,10 +5,20 @@ RUN pip install Flask
 CMD ["nohup","python3", "getmethod.py", "&"]
 
 
-#docker build -f Dockerfile1 -t getmethod .
+
 #docker run getmethod
-
 # docker run -e TEST1=your_value -e TEST2=your_value1 test_secret
-
-
 # nohup python3 getmethod.py &
+
+# docker network create --driver bridge my-net-dhanshree
+# docker run -d --name web --net my-net-dhanshree -p 5000:5000 getmethod
+# docker build -f Dockerfile1 -t getmethod .
+# docker build -t test_secret .
+# docker run --net my-net-dhanshree test_secret
+
+
+
+# docker build -f Dockerfile1 -t getmethod .
+# docker run -d --network host --name web -p 5000:5000 getmethod
+# docker build -t test_secret .
+# docker run --network host test_secret

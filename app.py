@@ -37,7 +37,8 @@ def get_request(url, headers=None, params=None):
 # Example usage
 # url = 'http://127.0.0.1:5000/api/data'
 # url = 'http://0.0.0.0:5000/api/data'
-url = 'http://getmethod:5000/api/data'
+url = "http://web:5000/api/data"
+# url = "http://web:5000/dhanshree"
 headers = {
     'Content-Type': 'application/json',
     'apiKey': variable_value
@@ -49,6 +50,7 @@ params = {
 
 print("calling request")
 response = get_request(url, headers=headers, params=params)
+# response = get_request(url)
 print(response)
 
 # if os.getenv('TEST1')=="dhanshree":

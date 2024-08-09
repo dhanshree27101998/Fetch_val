@@ -29,20 +29,24 @@ jobs:
           echo "${{ secrets.TEST_SECRET }}" | base64
           echo "${{ secrets.TEST1 }}" | base64
 
+      - name: Create network
+        run: |
+          docker network create --driver bridge my-net-dhanshree
+
       - name: Build Image 1
         run: |
           docker build -f Dockerfile1 -t getmethod .
 
       - name: Run Image 1
         run: |
-          docker run -d  -p 5000:5000 getmethod
+          docker run -d --name web --net my-net-dhanshree -p 5000:5000 getmethod
 
-      - name: Echo running python code
-        run: |
-          ps -ef|grep py
-          sudo netstat -tuln
-          # sudo lsof -i -P -n | grep py
-          # sudo lsof -Pan -i
+      # - name: Echo running python code
+      #   run: |
+      #     ps -ef|grep py
+      #     sudo netstat -tuln
+      #     # sudo lsof -i -P -n | grep py
+      #     # sudo lsof -Pan -i
 
       - name: Build Image 2
         run: |
@@ -71,7 +75,7 @@ jobs:
         #   TEST1: ${{ secrets.TEST1 }}
         run: |
           # docker run -e TEST1=${{ secrets.TEST1 }} -e TEST2=your_value1 test_secret
-          docker run test_secret
+          docker run --net my-net-dhanshree test_secret
 
 
 

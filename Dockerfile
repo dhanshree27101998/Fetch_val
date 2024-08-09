@@ -5,8 +5,9 @@ ARG TEST1
 ARG TEST2
 ENV TEST1=${TEST1}
 ENV TEST2=${TEST2}
-RUN pip install cryptography
+# RUN pip install cryptography
 RUN pip install requests
+RUN pip install --upgrade pip
 RUN pip install Flask
 CMD ["python", "app.py"]
 
