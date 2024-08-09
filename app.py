@@ -4,8 +4,8 @@ import os
 import requests
 
 # Fetch environment variables
-variable_value = os.getenv('TEST1')
-# variable_value="Dhanshree"
+# variable_value = os.getenv('TEST1')
+variable_value="Dhanshree"
 print(f'The value of TEST1 is {variable_value}')
 
 def get_request(url, headers=None, params=None):
@@ -36,7 +36,8 @@ def get_request(url, headers=None, params=None):
 
 # Example usage
 # url = 'http://127.0.0.1:5000/api/data'
-url = 'http://0.0.0.0:5000/api/data'
+# url = 'http://0.0.0.0:5000/api/data'
+url = 'http://getmethod:5000/api/data'
 headers = {
     'Content-Type': 'application/json',
     'apiKey': variable_value
